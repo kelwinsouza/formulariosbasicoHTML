@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendendo Formulários</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: 100vh;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 45%;
+      background-color: #fff;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    label {
+      font-size: 14px;
+      color: #555;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .explanation {
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+    }
+    .code-container {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 14px;
+      margin-top: 20px;
+      background-color: #fafafa;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .code-container pre {
+      color: #333;
+    }
+    .container:hover {
+      background-color: #f9f9f9;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Aprendendo Formulários</h1>
+
+    <form>
+      <label for="nome">1. Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+      <div class="explanation">
+        <p><strong>O que é isso?</strong> Este é um campo de texto onde você digita o seu nome.</p>
+      </div>
+      <div class="code-container">
+        <pre>&lt;label for="nome"&gt;1. Nome:&lt;/label&gt;
+&lt;input type="text" id="nome" name="nome" placeholder="Digite seu nome"&gt;</pre>
+      </div>
+
+      <label for="email">2. E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+      <div class="explanation">
+        <p><strong>O que é isso?</strong> Aqui você deve digitar seu e-mail. O navegador ajuda a verificar se o formato está correto (exemplo: nome@dominio.com).</p>
+      </div>
+      <div class="code-container">
+        <pre>&lt;label for="email"&gt;2. E-mail:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" placeholder="Digite seu e-mail"&gt;</pre>
+      </div>
+
+      <label for="telefone">3. Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+      <div class="explanation">
+        <p><strong>O que é isso?</strong> Este campo é para o número do seu telefone. A entrada de telefone pode ser ajustada para diferentes formatos.</p>
+      </div>
+      <div class="code-container">
+        <pre>&lt;label for="telefone"&gt;3. Telefone:&lt;/label&gt;
+&lt;input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone"&gt;</pre>
+      </div>
+
+      <label>4. Qual sua opção preferida?</label>
+      <div>
+        <label>
+          <input type="radio" name="preferencia" value="opcao1"> Opção 1
+        </label>
+        <label>
+          <input type="radio" name="preferencia" value="opcao2"> Opção 2
+        </label>
+      </div>
+      <div class="explanation">
+        <p><strong>O que é isso?</strong> São botões para escolher apenas uma opção. Você pode escolher uma das duas opções, mas não ambas.</p>
+      </div>
+      <div class="code-container">
+        <pre>&lt;label&gt;4. Qual sua opção preferida?&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="preferencia" value="opcao1"&gt; Opção 1&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="preferencia" value="opcao2"&gt; Opção 2&lt;/label&gt;</pre>
+      </div>
+
+      <label>5. Você aceita receber novidades?</label>
+      <label>
+        <input type="checkbox" name="novidades"> Sim, eu aceito receber novidades.
+      </label>
+      <div class="explanation">
+        <p><strong>O que é isso?</strong> Uma caixa que você pode marcar se quiser aceitar receber novidades. Você pode marcar ou desmarcar essa caixa.</p>
+      </div>
+      <div class="code-container">
+        <pre>&lt;label&gt;5. Você aceita receber novidades?&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" name="novidades"&gt; Sim, eu aceito receber novidades.&lt;/label&gt;</pre>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</body>
+</html>
